@@ -1,0 +1,38 @@
+[
+  {
+    "categoria": "Vivienda",
+    "descripcion": "Desembolsos para urbanización, construcción, remodelación y mantenimiento de viviendas.",
+    "informacionAdicional": "Incluye alquiler, hipoteca, servicios básicos y reparaciones.",
+    "imagen": "../../../assets/vivienda.png",
+    "alt": "Imagen de vivienda"
+  },
+  {
+    "categoria": "Salud",
+    "descripcion": "Desembolsos para prevención, diagnóstico, tratamiento y rehabilitación médica.",
+    "informacionAdicional": "Incluye consultas, medicamentos, hospitalización y seguros de salud.",
+    "imagen": "../../../assets/salud.png",
+    "alt": "Imagen de salud"
+  },
+  {
+    "categoria": "Educación",
+    "descripcion": "Desembolsos para instrucción formal e informal en diferentes niveles educativos.",
+    "informacionAdicional": "Incluye matrículas, colegiaturas, materiales educativos y cursos de capacitación.",
+    "imagen": "../../../assets/educacion.png",
+    "alt": "Imagen de educacion"
+  },
+ 
+  {
+    "categoria": "Alimentación",
+    "descripcion": "Desembolsos para adquisición de alimentos y bebidas para nutrición y bienestar.",
+    "informacionAdicional": "Incluye compras de comestibles, restaurantes y otros establecimientos de alimentos.",
+    "imagen": "../../../assets/alimentacion.png",
+    "alt": "Imagen de alimentacion"
+  },
+  {
+    "categoria": "Vestimenta",
+    "descripcion": "Desembolsos para la adquisición y mantenimiento de prendas de vestir y accesorios.",
+    "informacionAdicional": "Incluye ropa, calzado, accesorios y costura.",
+    "imagen": "../../../assets/vestimenta.png",
+    "alt": "Imagen de vestimenta"
+  }
+]

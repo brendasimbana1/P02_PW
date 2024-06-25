@@ -1,0 +1,16 @@
+<ul>
+    <li *ngFor="let obj of myArray; let i=index">
+    <div class="d-flex justify-content-center">
+   <div class="card" style="width: 22rem;">
+        <img src="{{obj.imagen}}" class="card-img-top" alt="{{obj.alt}}">
+        <div class="card-body">
+            <h1>{{obj.categoria}}</h1>
+            <p class="card-text">{{obj.descripcion}}</p>
+            <button (click)="informacion(obj.categoria)"  class="btn btn-primary mr-2" style="color: black; background-color: #CEE6F2; border-color: #CEE6F2;">Información</button>
+            <button (click)="info()" class="btn btn-info mr-2" style="color: black; background-color: #F2D7BD; border: #F2D7BD;">Información</button>
+            <button (click)="borrarDeducible(obj.categoria)" class="btn btn-warning">Borrar</button>
+        </div>
+    </div>
+    </div>  
+   </li>
+   </ul>

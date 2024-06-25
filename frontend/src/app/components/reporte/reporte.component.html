@@ -1,0 +1,47 @@
+<div class="container">
+    REPORTE DE PAGO DE IMPUESTO A RENTA
+    <div>
+      <button class="btn btn-secondary mt-2 mb-2" (click)="obtenerDatos()">Mostrar Gastos</button>
+      <button class="btn btn-secondary mt-2 ml-2 mb-2" (click)="cargarUsuarios()">Mostrar Usuarios</button>
+    </div>
+    <div>
+        <div *ngIf="datos && datos.length > 0">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Tipo de gasto</th>
+                    <th scope="col">RUC</th>
+                    <th scope="col">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor="let gasto of datos">
+                      <td>{{ gasto.id }}</td>
+                      <td>{{ gasto.tipo }}</td>
+                      <td>{{ gasto.ruc }}</td>
+                      <td>{{ gasto.valor }}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+    <div *ngIf="usuarios.length > 0">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of usuarios">
+            <td>{{ usuario.name }}</td>
+            <td>{{ usuario.username }}</td>
+            <td>{{ usuario.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
