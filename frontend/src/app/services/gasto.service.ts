@@ -8,7 +8,7 @@ import { User } from '../models/user.model';
 })
 export class GastoService {
 
-  private apiUrl = 'http://localhost:3000'; // Reemplaza con la URL de tu servidor simulado
+  private apiUrl = 'http://localhost:3000'; //servidor simulado
 
   constructor(private http: HttpClient) {}
 

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+
 @Component({
  selector: 'app-menu',
  templateUrl: './menu.component.html',
  styleUrls: ['./menu.component.css']
  })
  export class MenuComponent {
- title = 'site003';
+    constructor(public authService: AuthService ){}
+    title = 'frontend';
  }

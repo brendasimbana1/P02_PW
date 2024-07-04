@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http'; // Importa HttpClientModule y las funciones necesarias
+import { HttpClientModule, provideHttpClient, withFetch, HTTP_INTERCEPTORS } from '@angular/common/http'; // Importa HttpClientModule y las funciones necesarias
 import { Routes, RouterModule } from '@angular/router';
 import { GastoService } from './services/gasto.service';
 
@@ -13,6 +13,12 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { ReporteComponent } from './components/reporte/reporte.component';
 import { FormsModule } from '@angular/forms';
 import { ImpuestosComponent } from './components/impuestos/impuestos.component';
+import { LoginComponent } from './components/login/login.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { PrivateTasksComponent } from './components/private-tasks/private-tasks.component';
+import { TokenInterceptorService } from './services/token-interceptor.service';
+import { AuthGuard } from './auth.guard';
 
 const rutas: Routes = [
   { path: 'informacion', component: InformacionComponent },
@@ -28,7 +34,11 @@ const rutas: Routes = [
     InformacionComponent,
     FormularioComponent,
     ReporteComponent,
-    ImpuestosComponent
+    ImpuestosComponent,
+    LoginComponent,
+    TasksComponent,
+    RegistroComponent,
+    PrivateTasksComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +49,12 @@ const rutas: Routes = [
   ],
   providers: [
     provideHttpClient(withFetch()),
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

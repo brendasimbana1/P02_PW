@@ -4,7 +4,25 @@
         <a class="nav-link" routerLink="/formulario" routerLinkActive="activo">Registro de Facturas</a>
         <a class="nav-link" routerLink="/impuestos" routerLinkActive="activo">Impuesto Renta</a>
         <a class="nav-link" routerLink="/reporte" routerLinkActive="activo">Reporte</a>
-    </div>
-    
-    
+        <a class="nav-link" routerLink="/tasks" routerLinkActive="activo">Tasks</a>
+        <a class="nav-link" routerLink="/private-tasks" routerLinkActive="activo">Privado</a>
+        <ul class="navbar-nav ml-auto">
+            <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/login" routerLinkActive="active">LOGIN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/registro" routerLinkActive="active">REGISTRO</a>
+              </li>
+            </ng-container>
+            <ng-template #loggedIn>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" (click)="authService.logout()">LOGOUT</a>
+              </li>
+            </ng-template>
+          </ul>
+    </div> 
 </nav>
+<div class="container p-5">
+    <router-outlet></router-outlet>
+ </div>
