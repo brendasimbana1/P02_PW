@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://bsimbanag1:1234@cluster0.u1z20lj.mongodb.net/gastos?retryWrites=true&w=majority')
+const dbUri ='mongodb+srv://bsimbanag1:1234@cluster0.u1z20lj.mongodb.net/gastos?retryWrites=true&w=majority';
 
-.then(db => console.log('Database is connected'))
-.catch(err => console.log('err'))
+mongoose.connect(dbUri)
+  .then(() => {
+    console.log('Conexión a MongoDB Atlas exitosa');
+  })
+  .catch((error) => {
+    console.error('Error conectándose a MongoDB Atlas:', error);
+  });
