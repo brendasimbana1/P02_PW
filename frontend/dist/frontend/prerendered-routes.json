@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/formulario",
+    "/impuestos",
+    "/informacion",
+    "/login",
+    "/private-tasks",
+    "/registro",
+    "/reporte",
+    "/tasks"
+  ]
+}
