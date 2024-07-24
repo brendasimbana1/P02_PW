@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TasksService {
 
-  private URL = 'http://ec2-3-14-126-235.us-east-2.compute.amazonaws.com:3000';
+  private URL = 'http://3.14.126.235:3000';
 
   constructor(private http:HttpClient) { }
 
