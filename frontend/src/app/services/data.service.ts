@@ -8,7 +8,7 @@ import { Impuesto } from '../models/impuesto.model';
 })
 
 export class DataService {
-  private apiUrl = 'http://ec2-18-219-196-202.us-east-2.compute.amazonaws.com:3000';
+  private apiUrl = 'http://ec2-3-14-126-235.us-east-2.compute.amazonaws.com:3000';
   private jsonUrl = '../assets/categorias.json'; // Ruta al archivo JSON
   constructor(private http: HttpClient) { }
 

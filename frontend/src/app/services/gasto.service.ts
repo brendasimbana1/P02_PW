@@ -8,7 +8,7 @@ import { User } from '../models/user.model';
 })
 export class GastoService {
 
-  private apiUrl = 'http://ec2-18-219-196-202.us-east-2.compute.amazonaws.com:3000'; //servidor simulado
+  private apiUrl = 'http://ec2-3-14-126-235.us-east-2.compute.amazonaws.com:3000'; //servidor simulado
 
   constructor(private http: HttpClient) {}
 
